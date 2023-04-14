@@ -2,9 +2,3 @@ format: jb-book
 root: coverpage
 parts:
   - caption: Talks
-    chapters:
-      - file: placeholder
-  - caption: Posters
-    chapters:
-      - url: https://docs.neurodata.io/connectomic-heritability/sfn22.pdf
-        title: SfN 2022
