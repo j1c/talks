@@ -3,3 +3,5 @@ root: coverpage
 parts:
   - caption: Talks
     chapters:
+      - url: https://j1c.github.io/talks/lab-2022.html
+        title: Lab Meeting 2022/11
