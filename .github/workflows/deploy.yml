@@ -48,7 +48,7 @@ jobs:
       # Testing
       - name: test
         run: |
-          \cp ./docs/slides/ ./docs/_build/html/slides/
+          \cp -fR ./docs/slides/ ./docs/_build/html/slides/
 
       # Deploy the book's HTML to gh-pages branch
       - name: GitHub Pages action
