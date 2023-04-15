@@ -33,7 +33,7 @@ jobs:
       # Move html and pdfs
       - name: Moving slides to static HTML
         run: |
-          for FILE in $(cat manifest.txt)
+          for FILE in $(cat ./docs/slides/manifest.txt)
           do
             if test -f "./docs/slides/${FILE}/${FILE}.html"
             then
