@@ -24,11 +24,11 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
         run: |
-          pip install -r ./docs/requirements.txt
+          pip install -r ./requirements.txt
       # Build the book
       - name: Build the book
         run: |
-          jupyter-book build docs
+          jupyter-book build .
 
       # # Move html and pdfs
       # - name: Moving slides
@@ -48,4 +48,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3.9.3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs/_build/html
+          publish_dir: _build/html
