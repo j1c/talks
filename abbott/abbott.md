@@ -22,6 +22,6 @@ _Johns Hopkins University - Biomedical Engineering_
 ![icon](../images/icons/github.png) [_@j1c (Github)_](https://github.com/j1c)
 ![icon](../images/icons/twitter.png) [_@j1c (Twitter)_](https://twitter.com/j1c)
 
-![bg right:45% w:450](./../../images/logos/nd_logo_small.png)
+![bg right:45% w:450](../images/logos/nd_logo_small.png)
 
 ---
