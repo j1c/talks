@@ -30,18 +30,18 @@ jobs:
         run: |
           jupyter-book build docs
 
-      # Move html and pdfs
-      - name: Moving slides
-        run: |
-          for FILE in $(cat ./docs/slides/manifest.txt)
-          do
-            \cp -fR "./docs/slides/${FILE}/" ./docs/_build/html/
-          done
+      # # Move html and pdfs
+      # - name: Moving slides
+      #   run: |
+      #     for FILE in $(cat ./docs/slides/manifest.txt)
+      #     do
+      #       \cp -fR "./docs/slides/${FILE}/" ./docs/_build/html/
+      #     done
 
-      # Moving images
-      - name: Moving images
-        run: |
-          \cp -fR ./docs/slides/images/ ./docs/_build/html/
+      # # Moving images
+      # - name: Moving images
+      #   run: |
+      #     \cp -fR ./docs/slides/images/ ./docs/_build/html/
 
       # Deploy the book's HTML to gh-pages branch
       - name: GitHub Pages action
