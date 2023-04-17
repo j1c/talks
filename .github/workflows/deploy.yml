@@ -30,7 +30,7 @@ jobs:
         run: |
           jupyter-book build docs
 
-      Move html and pdfs
+      # Move html and pdfs
       - name: Moving slides
         run: |
           for FILE in $(cat ./docs/slides/manifest.txt)
