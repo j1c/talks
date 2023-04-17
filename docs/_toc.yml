@@ -5,7 +5,7 @@ parts:
     chapters:
       - url: https://j1c.github.io/talks/lab-2022/lab-2022.html
         title: Lab Meeting 2022/11
-      - url: https://j1c.github.io/talks/lab-2023/lab-2023.thml
+      - url: https://j1c.github.io/talks/lab-2023/lab-2023.html
         title: Lab Meeting 2023/04
   - caption: Others
     chapters:
