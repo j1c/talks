@@ -7,8 +7,7 @@ parts:
         title: Lab Meeting 2022/11
       - url: https://j1c.github.io/talks/lab-2023/lab-2023.thml
         title: Lab Meeting 2023/04
-
   - caption: Others
     chapters:
       - url: https://j1c.github.io/talks/abbott/abbott.html
-      title: Abbott Meeting
+        title: Abbott Meeting
