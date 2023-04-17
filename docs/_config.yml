@@ -4,7 +4,7 @@
 title: Talks # The title of the book. Will be placed in the left navbar.
 author: Jaewon Chung # The author of the book
 copyright: "2023" # Copyright year to be placed in the footer
-logo: ./images/logos/nd_logo.png # A path to the book logo
+logo: ./slides/images/logos/nd_logo.png # A path to the book logo
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
