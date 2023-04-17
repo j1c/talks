@@ -36,13 +36,14 @@ repository:
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
-  favicon: ./slides/images/logos/nd_logo_small.png
+  favicon: 📣
   comments:
     hypothesis: false
   use_repository_button: true
   use_issues_button: true
   use_edit_page_button: false
   home_page_in_navbar: true
+  extra_navbar: Powered by <a href="https://jupyterbook.org">Jupyter Book</a> # Will be displayed underneath the left navbar.
 
 parse:
   myst_enable_extensions: #https://myst-parser.readthedocs.io/en/latest/sphinx/reference.html#sphinx-config-options
