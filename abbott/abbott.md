@@ -34,6 +34,15 @@ Importance of the connectome in understanding brain function and disorders
 Definition of heritability: proportion of variation in a trait that can be attributed to genetic factors
 Introduce the concept of connectomic heritability: investigating the extent to which genetic factors influence the organization of the connectome
 
+<!--
+What is heritability? It is
+- How do we do thi?
+- We introduce two
+- We utilize statistical models specifically designed for networks, which allow meaningful comparison of connectomes across individuals
+- We apply this analysis framework on a large-scale dataset of connectomes from 1,000 individuals generated from the Human Connectome Project.
+- We find that connectomic heritability is significant and comparable to that of other cognitive traits, such as intelligence and personality.
+-->
+
 ---
 
 # Slide 2: Key Findings and Implications
@@ -54,7 +63,7 @@ Improved understanding of brain function and development
 
 <footer>
 
-$^1$ [Chung, Jaewon, et al. "Human Connectomes Are Heritable." bioRxiv (2023): 2023-04.](https://www.biorxiv.org/content/10.1101/2023.04.02.532875.abstract)
+[Chung, Jaewon, et al. "Human Connectomes Are Heritable." bioRxiv (2023): 2023-04.](https://www.biorxiv.org/content/10.1101/2023.04.02.532875.abstract)
 
 </footer>
 
@@ -117,13 +126,7 @@ Joshua T. Vogelstein
 
 <p style="font-size:20%;">
 
-- Dax Pryce
-- Bryan Tower
-- Nick Caurvina
-- Patrick Bourke
-- Jonathan McLean
-- Carolyn Buractaon
-- Amber Hoak
+Dax Pryce, Bryan Tower, Nick Caurvina, Patrick Bourke, Jonathan McLean, Carolyn Buractaon, Amber Hoak.
 
 </p>
 </div>
@@ -168,6 +171,18 @@ We bet these comments would help your presentation...
 
 ---
 
-#
+# Causal Estimand
 
 ---
+
+# Hypothesis Testing
+
+---
+
+# Connectome Models
+
+---
+
+# Connectome Model Simulations
+
+![center w:900](../images/heritability/3-simulations.png)
