@@ -4,7 +4,7 @@
 title: Talks # The title of the book. Will be placed in the left navbar.
 author: Jaewon Chung # The author of the book
 copyright: "2023" # Copyright year to be placed in the footer
-logo: ./images/logos/nd_logo.png # A path to the book logo
+logo: ./docs/images/logos/nd_logo.png # A path to the book logo
 exclude_patterns:
   [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints", "manifest.txt"]
 # Auto-exclude files not in the toc
@@ -42,7 +42,7 @@ repository:
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
-  favicon: ./images/icons/speak_no_evil.png
+  favicon: ./docs/images/icons/speak_no_evil.png
   comments:
     hypothesis: false
   use_repository_button: true
