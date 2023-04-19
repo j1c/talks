@@ -12,4 +12,6 @@ parts:
   - caption: Posters
     chapters:
       - url: https://j1c.github.io/talks/sfn22/sfn22.pdf
-        title: Society for Neuroscience 2022
+        title: Statistical Modeling of Structural Connectomes Reveal High Genetic Influence on Connectivity (SfN 2022)
+      - url: https://j1c.github.io/talks/ohbm19/ohbm19.pdf
+        title: Clustering Multi-Modal Connectomes (OHBM 2019)
