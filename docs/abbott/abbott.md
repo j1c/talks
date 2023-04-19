@@ -12,11 +12,11 @@ paginate: true
 _(he/him)_ - [NeuroData lab](https://neurodata.io/)
 _Johns Hopkins University - Biomedical Engineering_
 
-![icon](../../images/icons/mail.png) [_j1c@jhu.edu_](mailto:j1c@jhu.edu)
-![icon](../../images/icons/github.png) [_@j1c (Github)_](https://github.com/j1c)
-![icon](../../images/icons/twitter.png) [_@j1c (Twitter)_](https://twitter.com/j1c)
+![icon](../images/icons/mail.png) [_j1c@jhu.edu_](mailto:j1c@jhu.edu)
+![icon](../images/icons/github.png) [_@j1c (Github)_](https://github.com/j1c)
+![icon](../images/icons/twitter.png) [_@j1c (Twitter)_](https://twitter.com/j1c)
 
-![bg right:45% w:450](../../images/logos/nd_logo_small.png)
+![bg right:45% w:450](../images/logos/nd_logo_small.png)
 
 ---
 
@@ -79,35 +79,35 @@ h4 {font-size: 28px}
 
 <div>
 
-![person](../../images/faces/ebridge.jpg)
+![person](../images/faces/ebridge.jpg)
 Eric Bridgeford
 
 </div>
 
 <div>
 
-![person](../../images/faces/powell.jpg)
+![person](../images/faces/powell.jpg)
 Mike Powell
 
 </div>
 
 <div>
 
-![person](../../images/faces/pisner.jpg)
+![person](../images/faces/pisner.jpg)
 Derek Pisner
 
 </div>
 
 <div>
 
-![person](../../images/faces/cep.png)
+![person](../images/faces/cep.png)
 Carey Priebe
 
 </div>
 
 <div>
 
-![person](../../images/faces/jovo.png)
+![person](../images/faces/jovo.png)
 Joshua T. Vogelstein
 
 </div>
@@ -150,13 +150,13 @@ We bet these comments would help your presentation...
 
 # Analysis Overview
 
-![center](../../images/heritability/framework.png)
+![center](../images/heritability/framework.png)
 
 ---
 
 # MRI to Connectomes
 
-![center](../../images/heritability/m2g_pipeline.png)
+![center](../images/heritability/m2g_pipeline.png)
 
 ---
 
@@ -164,7 +164,7 @@ We bet these comments would help your presentation...
 
 <br>
 
-![center w:800](../../images/heritability/dag.png)
+![center w:800](../images/heritability/dag.png)
 
 ---
 
