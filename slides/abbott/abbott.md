@@ -5,13 +5,7 @@ size: 16:9
 paginate: true
 ---
 
-<style scoped>
-p {
-    font-size: 24px;
-}
-</style>
-
-# Abbott
+# TODO: Title
 
 ## Jaewon Chung
 
@@ -51,31 +45,118 @@ Personalized medicine
 Early diagnosis and intervention
 Improved understanding of brain function and development
 
+<footer>
+
+$^1$ [Chung, Jaewon, et al. "Human Connectomes Are Heritable." bioRxiv (2023): 2023-04.](https://www.biorxiv.org/content/10.1101/2023.04.02.532875.abstract)
+
+</footer>
+
 ---
 
-Questions
+<style scoped>
+p {
+    font-size: 22px
+}
+h4 {font-size: 28px}
+</style>
+
+<div class="columns">
+
+<div>
+<h1>Acknowledgements</h2>
+
+#### JHU
+
+<!-- Start people panels -->
+<div class='minipanels'>
+<div>
+
+![person](../images/faces/ebridge.jpg)
+Eric Bridgeford
+
+</div>
+
+<div>
+
+![person](../images/faces/powell.jpg)
+Mike Powell
+
+</div>
+
+<div>
+
+![person](../images/faces/pisner.jpg)
+Derek Pisner
+
+</div>
+
+<div>
+
+![person](../images/faces/cep.png)
+Carey Priebe
+
+</div>
+
+<div>
+
+![person](../images/faces/jovo.png)
+Joshua T. Vogelstein
+
+</div>
+</div>
+
+#### Microsoft Research
+
+<p style="font-size:20%;">
+
+- Dax Pryce
+- Bryan Tower
+- Nick Caurvina
+- Patrick Bourke
+- Jonathan McLean
+- Carolyn Buractaon
+- Amber Hoak
+
+</p>
+</div>
+<div class="vl"></div>
+<div>
+<br><br><br><br><br>
+<p><h1 align='center'>Questions?</p>
+</div>
+
+</div>
 
 ---
 
-Additional Slides
+<br><br><br><br><br>
+
+<p><h1 align="center">Additional Slides</p>
+
+<!--
+Also supports multiline.
+We bet these comments would help your presentation...
+-->
 
 ---
 
 # Analysis Overview
 
-![](../images/heritability/framework.png)
+![center](../images/heritability/framework.png)
 
 ---
 
-## MRI to Connectomes
+# MRI to Connectomes
 
-![](../images/heritability/m2g_pipeline.png)
+![center](../images/heritability/m2g_pipeline.png)
 
 ---
 
 # Causal Directed Acyclic Graph
 
-![](../images/heritability/dag.png)
+<br>
+
+![center w:800](../images/heritability/dag.png)
 
 ---
 
