@@ -41,6 +41,14 @@ We apply our analysis framework to connectomes estimated from the Human Connecto
 
 ---
 
+<!--
+
+So, where do we go from here?
+- We can repeat the analysis on other datasets, such as the UK Biobank, to further validate our findings.
+- We can repeat the analysis on connectomes from different modalities, such as functional MRI, which measures brain activity over time.
+- We can use our analysis framework to investigate the relationship between connectomic heritability and other cognitive traits, such as intelligence and personality.
+-->
+
 <footer>
 
 [Chung, Jaewon, et al. "Human Connectomes Are Heritable." bioRxiv (2023): 2023-04.](https://www.biorxiv.org/content/10.1101/2023.04.02.532875.abstract)
