@@ -20,6 +20,12 @@ _Johns Hopkins University - Biomedical Engineering_
 
 ---
 
+# How do we study connectomic heritability?
+
+<br>
+
+![center](../images/heritability/simple-framework.png)
+
 <!--
 Heritability studies have led to numerous breakthroughs in our understanding of the genetic influences on various traits, behaviors, and diseases. For example, twin studies have shown that genetic factors play a significant role in the development of type 1 diabetes, and researchers have identified early markers of the disease, such as the presence of specific antibodies. This has led to the development of early screening programs and interventions focused on delaying or preventing the onset of type 1 diabetes in high-risk individuals.
 
@@ -49,7 +55,7 @@ To answer this question, we apply our analysis framework to connectomes estimate
 <!--
 Using the statistical models for connectomes, we can learn simplified, Euclidean representations called latent positions, and these latent positions allow us to measure the differences between pairs of connectomes. That is, differences between latent positions imply differences in connectomes. Given these latent positions, we develop three separate, but related, ways of comparing them. First, the exact model is the simplest, and just measures all differences between latent positions. Second, the global model examines whether the latent positions of one subject are a scaled version of the other. For example, if the total number of neural connections in our brains decrease as we age, we have no way of differentiating whether significant findings using the exact model are a result of differences due to neural decline or differences in the fundamental structure of the connectomes themselves. So we develop the vertex model, which allows for each brain region to be scaled differently. This approach considers that, within the same hemisphere, different regions may have distinct preferences for forming connections with specific other regions. In the global and vertex models, we remove the effects of scaling and then compare the latent positions to provide a clearer understanding of the relationships between connectomes.
 
-In panel A, we plot the differences between connectomes separated by familial relationships. Points toward the left in each column indicate smaller differences, while those on the right represent larger differences. Now, if we focus on the diamonds, which represents the median differences, we can observe a pattern: as familial relationships become more distant, the median differences between connectomes tend to increase regardless of the connectome model and gender.
+In panel A, we plot the differences between connectomes separated by familial relationships. Points toward the left in each column indicate smaller differences, while those on the right represent larger differences. Now, if we focus on the diamonds, which represents the median differences, we can observe a pattern: as familial relationships become more distant, that is as we go from monozygotic, or identical twins, dizygotic, or fraternal twins, non-twin siblings, to unrelated subjects, the median differences between connectomes tend to increase. We also observe this pattern regardless of the connectome model and gender.
 
 In panel B, we quantify whether the ordering in panel A is statistically significant or not using our causal hypothesis test. Here, X's correspond to significant results. This test is based on the idea that if the null hypothesis is true, then the differences between connectomes should be independent of familial relationships given our measured covariates, such as neuroanatomy, sex, and age. If the test is significant, then we can reject the null hypothesis and conclude that there exists a causal effect of genomes on connectomes. We can see that the test is significant for all exact and global models, but not the vertex model. This is interesting because the results potentially suggest that genomes cause differences in brain region-wise scaling.
 
