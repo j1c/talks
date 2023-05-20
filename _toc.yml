@@ -15,3 +15,5 @@ parts:
         title: Statistical Modeling of Structural Connectomes Reveal High Genetic Influence on Connectivity (SfN 2022)
       - url: https://j1c.github.io/talks/ohbm19/ohbm19.pdf
         title: Clustering Multi-Modal Connectomes (OHBM 2019)
+      - url: https://j1c.github.io/talks/brain-2023/brain2023.pdf
+        title: "The Heritability of Human Connectomes: a Causal Modeling Analysis"
