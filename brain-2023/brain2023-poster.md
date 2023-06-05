@@ -50,7 +50,7 @@ math: katex
 <!-- Box col1 -->
 <div>
 
-- Aimed to define heritability for populations of connectomes using statistical modelling.
+- Defined heritability for populations of connectomes using causal and statistical modeling.
 
 </div>
 <div>
@@ -119,22 +119,28 @@ math: katex
 
 ### Structural Connectomes from Diffusion MRI
 
-![center w:1500](../images/heritability/data-plot.png)
+<br>
+
+![center](../images/heritability/data-plot.png)
 **Fig 3:** Visualization of connectomes as adjacency matrices using the projected Desikan parcellation with hemispheric labels. **(A)** Average connectome of all subjects with log-transformed edge weights. **(B)** Absolute difference of connectomes from the most different pair of subjects with log-transformed edge weights.
 
 <br>
 
 ### New title
 
-![center w:1500](../images/heritability/Desikan-composite-a.png)
-**Fig 3:** Visualization of pairwise distances of connectomes and neuroanatomy. Diamonds represent the median. Median distances grow as genetic distances increase.
+<br>
+
+![center](../images/heritability/Desikan-composite-a.png)
+**Fig 4:** Visualization of pairwise distances of connectomes and neuroanatomy. Each point represents the pairwise distance between pairs of participants; diamond markers represent the median distance, colors are familial relationships, and rows are sex.
 
 <br>
 
-### New title
+### Associational and Causal Tests for Heritability
 
-![](../images/heritability/Desikan-composite-b.png)
-**Fig 4:** Testing for associational heritability of connectomes and neuroanatomy. Red squares indicate significant tests; blue indicate non-significant tests.
+<br>
+
+![center](../images/heritability/Desikan-composite-b.png)
+**Fig 5:** Testing associational and causal effect of genome on connectomes and neuroanatomy. Colors of heatmaps represent p-values, rows are gender groups, and columns are connectome models.
 
 <!-- End main column 2 -->
 </div>
@@ -165,7 +171,7 @@ math: katex
 - **Vertex scale:** Are the model parameters same after considering vertex wise scaling?
 
 ![center h:1000](../images/heritability/3-simulations.png)
-**Fig 3:** Examples of the three different models (exact, global scale, and vertex scale) of connectome heritability visualized as adjacency matrices. Networks are sampled from stochastic block models (SBMs) with different block probabilities.
+**Fig 6:** Examples of the three different models (exact, global scale, and vertex scale) of connectome heritability visualized as adjacency matrices. Networks are sampled from stochastic block models (SBMs) with different block probabilities.
 
 <br>
 
