@@ -96,7 +96,6 @@ math: katex
 **Fig 1:** Overview of the framework for measuring heritability of connectomes.
 
 <br>
-<br>
 
 ## Do <span style="color:var(--genome)"> genomes </span> cause <span style="color:var(--connectome)">connectomes</span>?
 
@@ -118,20 +117,24 @@ math: katex
 <!-- Start main column 2 -->
 <div>
 
-### Associational Heritability for Connectomes and Neuroanatomy
+### Structural Connectomes from Diffusion MRI
 
-![center w:1500](../images/heritability/results.png)
+![center w:1500](../images/heritability/data-plot.png)
+**Fig 3:** Visualization of connectomes as adjacency matrices using the projected Desikan parcellation with hemispheric labels. **(A)** Average connectome of all subjects with log-transformed edge weights. **(B)** Absolute difference of connectomes from the most different pair of subjects with log-transformed edge weights.
+
+<br>
+
+### New title
+
+![center w:1500](../images/heritability/Desikan-composite-a.png)
 **Fig 3:** Visualization of pairwise distances of connectomes and neuroanatomy. Diamonds represent the median. Median distances grow as genetic distances increase.
 
 <br>
 
-![](./results_sfn1.png)
+### New title
+
+![](../images/heritability/Desikan-composite-b.png)
 **Fig 4:** Testing for associational heritability of connectomes and neuroanatomy. Red squares indicate significant tests; blue indicate non-significant tests.
-
-### Conditional Heritability of Connectomes
-
-![](./results_sfn2.png)
-**Fig 5:** Testing for conditional heritability of connectomes. Red squares indicate significant tests; blue indicate non-significant tests.
 
 <!-- End main column 2 -->
 </div>
@@ -157,9 +160,9 @@ math: katex
 
 ### Three Models of Connectomes
 
-- **Exact:** Are the generative models of connectomes the same?
-- **Global scale:** Are the generative models same after considering global scaling?
-- **Vertex scale:** Are the generative models same after considering vertex wise scaling?
+- **Exact:** Are the model parameters of connectomes the same?
+- **Global scale:** Are the model parameters same after considering global scaling?
+- **Vertex scale:** Are the model parameters same after considering vertex wise scaling?
 
 ![center h:1000](../images/heritability/3-simulations.png)
 **Fig 3:** Examples of the three different models (exact, global scale, and vertex scale) of connectome heritability visualized as adjacency matrices. Networks are sampled from stochastic block models (SBMs) with different block probabilities.
