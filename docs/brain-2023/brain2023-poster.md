@@ -21,7 +21,7 @@ math: katex
 
 # The Heritability of Human Connectomes: a Causal Modeling Analysis
 
-## Jaewon Chung<span class=super>1\*</span>, Eric Bridgeford<span class=super>1</span>, Michael Powell<span class=super>2</span>, Derek Pisner <span class=super>3</span>, Joshua T. Vogelstein<span class=super>1</span>
+## Jaewon Chung<span class=super>1\*</span>, Eric W. Bridgeford<span class=super>1</span>, Michael Powell<span class=super>2</span>, Derek Pisner <span class=super>3</span>, Joshua T. Vogelstein<span class=super>1</span>
 
 ##### 1 - Johns Hopkins University, 2 - United States Military Academy, 3 - Independent Researcher, $\ast$ - correspondence: ![icon](../images/icons/mail.png) [_j1c@jhu.edu_](mailto:j1c@jhu.edu) ![icon](../images/icons/github.png) [_@j1c(Github)_](https://github.com/j1c) ![icon](../images/icons/twitter.png) [_@j1chung(Twitter)_](https://twitter.com/j1chung)
 
@@ -55,18 +55,19 @@ math: katex
 </div>
 <div>
 
-- Structural connectomes are heritable without controlling for neuroanatomy.
-- Neuroanatomy is also highly heritable
+- Associational tests show significant heritability in all genders and connectome models.
 
 </div>
+
 <div>
 
-- Connectomes remain heritable after controlling for effects of neuroanatomy on connectomes.
+- Causal tests that control for neuroanatomy and age show significant heritability in some connectome models and some genders.
 
 </div>
+
 <div>
 
-- Provide tools for future analysis on populations of connectomes.
+- Provide code and tools for future analysis on populations of connectomes in _graspologic_ and _hyppo_.
 
 </div>
 
@@ -88,16 +89,20 @@ math: katex
   - Selection Graph theoretic features
   - Multivariate normality assumptions
 
-### Overview of Analysis
-
 <!-- Big question for this work -->
-
-![center](../images/heritability/framework.png)
-**Fig 1:** Overview of the framework for measuring heritability of connectomes.
 
 <br>
 
-## Do <span style="color:var(--genome)"> genomes </span> cause <span style="color:var(--connectome)">connectomes</span>?
+<h1 style="font-size:90px; ">
+Do <span style="color:var(--genome)"> genomes </span> cause <span style="color:var(--connectome)">connectomes</span>?
+</h1>
+
+<br>
+
+### Overview of Analysis
+
+![center](../images/heritability/framework.png)
+**Fig 1:** Overview of the framework for detecting heritability of connectomes.
 
 <br>
 
@@ -119,14 +124,12 @@ math: katex
 
 ### Structural Connectomes from Diffusion MRI
 
-<br>
-
 ![center](../images/heritability/data-plot.png)
 **Fig 3:** Visualization of connectomes as adjacency matrices using the projected Desikan parcellation with hemispheric labels. **(A)** Average connectome of all subjects with log-transformed edge weights. **(B)** Absolute difference of connectomes from the most different pair of subjects with log-transformed edge weights.
 
 <br>
 
-### New title
+### Pairwise Distances Grow as Familial Distances Grow
 
 <br>
 
@@ -135,7 +138,7 @@ math: katex
 
 <br>
 
-### Associational and Causal Tests for Heritability
+### Associational and Causal Tests Show Significant Heritability in Some Connectome Models
 
 <br>
 
@@ -164,11 +167,13 @@ math: katex
 
 </div>
 
-### Three Models of Connectomes
+<br>
 
-- **Exact:** Are the model parameters of connectomes the same?
-- **Global scale:** Are the model parameters same after considering global scaling?
-- **Vertex scale:** Are the model parameters same after considering vertex wise scaling?
+### Three Models for Comparing Connectomes
+
+**Exact:** Are the connectome model parameters of connectomes the same?
+**Global scale:** Are the connectome model parameters same after considering global scaling?
+**Vertex scale:** Are the connectome model parameters same after considering vertex wise scaling?
 
 ![center h:1000](../images/heritability/3-simulations.png)
 **Fig 6:** Examples of the three different models (exact, global scale, and vertex scale) of connectome heritability visualized as adjacency matrices. Networks are sampled from stochastic block models (SBMs) with different block probabilities.
