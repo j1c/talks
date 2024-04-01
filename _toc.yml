@@ -19,3 +19,11 @@ parts:
         title: Clustering Multi-Modal Connectomes (OHBM 2019)
       - url: https://j1c.github.io/talks/brain-2023/brain2023-poster.pdf
         title: "The Heritability of Human Connectomes: a Causal Modeling Analysis"
+  - caption: Others
+    chapters:
+      - url: https://j1c.github.io/talks/dbo/dbo.html
+        title: Doctoral Board Oral Exam
+      - url: https://j1c.github.io/talks/committee/committee.html
+        title: Research Defence
+      - url: https://j1c.github.io/talks/defense/defence.html
+        title: PhD Defense
