@@ -161,9 +161,10 @@ header {
 }
 
 
+
 /* adds total slides to paginate */
 section::after {
-    content: attr(data-marpit-pagination);
+    content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
 }
 
 .vl {
