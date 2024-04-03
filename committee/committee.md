@@ -5,17 +5,21 @@ size: 16:9
 paginate: true
 ---
 
+<!-- _paginate: false -->
+
 <style scoped>
 p {
     font-size: 24px;
 }
 </style>
 
-# Thesis Committee Meeting
+# Statistical Connectomics
 
-## Reserach Defense
+## Thesis Committee Meeting
 
-## Jaewon Chung
+<br>
+
+### Jaewon Chung
 
 _(he/him)_ - [NeuroData lab](https://neurodata.io/)
 Johns Hopkins University
@@ -33,19 +37,15 @@ Department of Biomedical Engineering
 
 # Outline
 
-- Prior work
-  - **Connectome of an insect brain**
-  - Analysis of bilateral symmetry
-  - Matching neurons between brain hemispheres
+- What we've done
+
   - `graspologic` + `hyppo`
-- Future work
-  - On the power of comparative connectomics
-  - Collaborative real-data investigations
-  - Graduation plan
+
+- Graduation plan
 
 ---
 
-## How to use these (and other) tools?
+## How to use these tools?
 
 <div class="columns">
 <div>
@@ -53,6 +53,8 @@ Department of Biomedical Engineering
 ## [graspologic](https://github.com/microsoft/graspologic)
 
 [![h:30](https://pepy.tech/badge/graspologic)](https://pepy.tech/project/graspologic) [![h:30](https://img.shields.io/github/stars/microsoft/graspologic?style=social)](https://github.com/microsoft/graspologic) [![h:30](https://img.shields.io/github/contributors/microsoft/graspologic)](https://github.com/microsoft/graspologic/graphs/contributors)
+
+<br><br>
 
 ![w:450](../images/logos/graspologic-logo.svg)
 
@@ -74,8 +76,11 @@ Department of Biomedical Engineering
 
 # Outline
 
-- Future work
-  - **Graduation plan**
+- What we've done
+
+  - `graspologic` + `hyppo`
+
+- **Graduation plan**
 
 ---
 
@@ -93,15 +98,15 @@ ul,p {
 
 #### Manuscripts
 
-- First author
+- (Co)-First author
   - Heritability, in review at _Imaging Neuro_ (2024)
+  - Indep. Testing in Time Series, _TMLR_ (2024)
   - Two-sample graph testing, _Stat_ (2022)
   - Statistical Connectomics, _ARISA_ (2021)
-  - `graspologic`, JMLR (2019)
+  - `graspologic`, _JMLR_ (2019)
 - Second author
-  - Indep. Testing in Time Series, _TMLR_ (2024)
-  - Causal Conditional DCorr, (2023)
-  - Multiscale Connectomics, (2022)
+  - Causal Conditional DCorr, _in review_ (2023)
+  - Multiscale Connectomics, _in review_ (2023)
 - Others
   - Connectal Coding, _Neurobio_ (2019)
   - SPORF, _JMLR_ (2019)
@@ -147,8 +152,8 @@ ul,p {
 
 #### Manuscripts
 
-- 1-2 collaborations with experimentalists (e.g., MANC connectome, behavior + larva connectome)
-- "On the power of comparative connectomics"
+- Collaboration with Child Mind Institute
+- Collaboration with Alex Badea
 
 </div>
 <div>
@@ -170,4 +175,79 @@ h2 {
 <br>
 <br>
 
-## Graduation $\approx$ April/May 2024
+## Graduation $\approx$ May 2024
+
+---
+
+# Acknowledgements
+
+#### Team
+
+<style scoped>
+
+p {
+    font-size: 24px;
+}
+</style>
+
+<div class='minipanels'>
+
+<div>
+
+![person](./../../images/people/bridgeford.jpg)
+Eric Bridgeford
+
+</div>
+
+<div>
+
+![person](./../../images/people/mike-powell.jpg)
+Mike Powell
+
+</div>
+
+<div>
+
+![person](./../../images/people/priebe_carey.jpg)
+Carey Priebe
+
+</div>
+
+<div>
+
+![person](./../../images/people/vogelstein_joshua.jpg)
+Joshua Vogelstein
+
+</div>
+
+</div>
+
+NeuroData lab, Microsoft Research
+
+#### Funding
+
+NSF CAREER Award (J.T.V.), NSF NeuroNex Award (J.T.V.), NIH BRAIN Initiative (J.T.V.)
+
+---
+
+![bg center blur:3px opacity:20%](../../images/background.svg)
+
+# Feedback?
+
+<span> </span>
+<span> </span>
+<span> </span>
+<span> </span>
+
+<style scoped>
+section {
+    justify-content: center;
+    text-align: center;
+}
+</style>
+
+### Jaewon Chung
+
+![icon](../images/icons/mail.png) [j1c@jhu.edu](mailto:j1c@jhu.edu)
+![icon](../images/icons/github.png) [@j1c (Github)](https://github.com/j1c)
+![icon](../images/icons/web.png) [j1c.org](https://j1c.org/)
