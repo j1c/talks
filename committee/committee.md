@@ -101,6 +101,7 @@ ul,p {
 - (Co)-First author
   - Heritability, in review at _Imaging Neuro_ (2024)
   - Indep. Testing in Time Series, _TMLR_ (2024)
+  - m2g, in review at _Nature Methods_ (2024)
   - Two-sample graph testing, _Stat_ (2022)
   - Statistical Connectomics, _ARISA_ (2021)
   - `graspologic`, _JMLR_ (2019)
@@ -108,9 +109,7 @@ ul,p {
   - Causal Conditional DCorr, _in review_ (2023)
   - Multiscale Connectomics, _in review_ (2023)
 - Others
-  - Connectal Coding, _Neurobio_ (2019)
-  - SPORF, _JMLR_ (2019)
-  - 2 others published
+  - 4 others published
 
 </div>
 <div>
@@ -195,28 +194,63 @@ p {
 
 <div>
 
-![person](./../../images/people/bridgeford.jpg)
+![person](../images/faces/ebridge.jpg)
 Eric Bridgeford
 
 </div>
 
 <div>
 
-![person](./../../images/people/mike-powell.jpg)
+![person](../images/faces/pedigo.jpg)
+Ben Pedigo
+
+</div>
+
+<div>
+
+![person](../images/faces/pisner.jpg)
+Derek Pisner
+
+</div>
+
+<div>
+
+![person](../images/faces/cencheng.jpg)
+Cencheng Shen
+
+</div>
+
+<div>
+
+![person](../images/faces/ronak.jpeg)
+Ronak Mehta
+
+</div>
+
+<div>
+
+![person](../images/faces/vivek.jpg)
+Vivek Gopalakrishnan
+
+</div>
+
+<div>
+
+![person](../images/faces/powell.jpg)
 Mike Powell
 
 </div>
 
 <div>
 
-![person](./../../images/people/priebe_carey.jpg)
+![person](../images/faces/cep.png)
 Carey Priebe
 
 </div>
 
 <div>
 
-![person](./../../images/people/vogelstein_joshua.jpg)
+![person](../images/faces/jovo.png)
 Joshua Vogelstein
 
 </div>
