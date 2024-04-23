@@ -107,7 +107,7 @@ Networks (or graphs) are mathematical abstractions to represent relational data
 
 <footer>
 
-[Chung et al. "A low-resource reliable pipeline to democratize multi-modal connectome estimation and analysis." <i>In review, Nature Methods</i> (2024)](https://www.biorxiv.org/content/10.1101/2021.11.01.466686v2)
+[Chung et al. "A low-resource reliable pipeline..." <i>In review, Nature Methods</i> (2024)](https://www.biorxiv.org/content/10.1101/2021.11.01.466686v2)
 
 </footer>
 
@@ -146,19 +146,56 @@ Networks (or graphs) are mathematical abstractions to represent relational data
 # Statistical Models for Networks
 
 - Random dot product graphs (RDPGs)
-  - Each vertex has a low $d$ dimensional latent vector.
+  - Each vertex has a low $d$ dimensional latent position.
   - Estimate latent position matrix $X$ via adjacency spectral embedding.
   - $P[i\rightarrow j]$ = $\langle x_i, x_j\rangle$
 
-<br>
-
 ![center h:300](./images/ase.png)
 
+<!--
+<footer>
+
+Athreya et al. "RDPG..." _JMLR_ (2021)
+
+</footer> -->
+
 ---
 
-# Testing
+# Two sample graph testing
 
----
+<div class="columns">
+
+<div>
+
+- Suppose we have two networks
+- Want to test if they are "same" or not
+
+Hypothesis:
+
+- $H_0: F($<span style="color: var(--network1)">Network 1</span>$) = F($<span style="color: var(--network2)">Network 2</span>$)$
+- $H_A: F($<span style="color: var(--network1)">Network 1</span>$) \neq F($<span style="color: var(--network2)">Network 2</span>$)$
+
+More precisely:
+
+- $H_0: F_X = F_Y \circ W$
+- $H_A: F_X \neq F_Y \circ W$
+
+</div>
+<div>
+
+###### Drosophila Left vs Right Brain
+
+![center w:450](./images/nonpar.png)
+
+</div>
+
+</div>
+
+<footer>
+
+[Chung et al. "Valid two-sample graph testing..." <i>Stat</i> (2022)](https://doi.org/10.1002/sta4.429)
+
+</footer>
 
 ---
 
@@ -187,166 +224,105 @@ Networks (or graphs) are mathematical abstractions to represent relational data
 
 ---
 
-# Do genomes affect connectomes?
+# Do <span style="color: var(--genome)">genomes</span> affect <span style="color: var(--connectome)">connectomes</span>?
+
+<div class="columns">
+
+<div>
 
 - Our hypothesis:
-  $H_0: F($<span style="color: var(--connectome)">Connectome</span>|<span style="color: var(--genome)">Genome</span>$) = F($<span style="color: var(--connectome)">Connectome</span>$)$
-  $H_A: F($<span style="color: var(--connectome)">Connectome</span>|<span style="color: var(--genome)">Genome</span>$) \neq F($<span style="color: var(--connectome)">Connectome</span>$)$
-
-- Alternatively:
-  $H_0: F($<span style="color: var(--connectome)">Connectome</span>, <span style="color: var(--genome)">Genome</span>$) = F($<span style="color: var(--connectome)">Connectome</span>$)F($<span style="color: var(--genome)">Genome</span>$)$
-  $H_A: F($<span style="color: var(--connectome)">Connectome</span>, <span style="color: var(--genome)">Genome</span>$) \neq F($<span style="color: var(--connectome)">Connectome</span>$)F($<span style="color: var(--genome)">Genome</span>$)$
+  $H_0: F($<span style="color: var(--connectome)">C</span>, <span style="color: var(--genome)">G</span>$) = F($<span style="color: var(--connectome)">C</span>$)F($<span style="color: var(--genome)">G</span>$)$
+  $H_A: F($<span style="color: var(--connectome)">C</span>, <span style="color: var(--genome)">G</span>$) \neq F($<span style="color: var(--connectome)">C</span>$)F($<span style="color: var(--genome)">G</span>$)$
 
 - Known as independence testing
-- Test statistic: _distance correlation (dcorr)_
-- Implication if false: there exists an associational heritability.
+- Test statistic: _distance correlation (Dcorr)_
+- Implication if false: there exists an **associational** heritability.
+
+</div>
+
+<div>
+
+<br>
+<br>
+
+![center](./images/associational.png)
+
+</div>
+
+</div>
 
 ---
 
-# How do we compare connectomes?
+# Do <span style="color: var(--genome)">genomes</span> affect <span style="color: var(--connectome)">connectomes</span> given <span style="color: var(--neuroanatomy)">covariates</span>?
 
-- Random dot product graph (RDPG)
-
-  - Each vertex (region of interest) has a low $d$ dimensional latent vector (position).
-  - Estimate latent position matrix $X$ via adjacency spectral embedding.
-  <!-- - $P[i\rightarrow j]$ = $\langle x_i, x_j\rangle$ -->
-
-- d(<span style="color: var(--connectome)">Connectome</span>$_k$, <span style="color: var(--connectome)">Connectome</span>$_l$) = $||X^{(k)} - X^{(l)}R||_F$
-
----
-
-# Distance correlation
-
-- Measures dependence between two _multivariate_ quantities.
-  - For example: connectomes, genomes.
-- Can detect nonlinear associations.
-- Measures correlation between pairwise distances.
-
-![center w:800](./images/unconditional_test.png)
-
----
-
-# Do genomes affect connectomes given covariates?
+<div class="columns">
+<div>
 
 - Want to test:
-  $H_0: F($<span style="color: var(--connectome)">Conn.</span>, <span style="color: var(--genome)">Genome</span>|Covariates$) = F($<span style="color: var(--connectome)">Conn.</span>|Covariates$)F($<span style="color: var(--genome)">Genome</span>|Covariates$)$
-  $H_A: F($<span style="color: var(--connectome)">Conn.</span>, <span style="color: var(--genome)">Genome</span>|Covariates$) \neq F($<span style="color: var(--connectome)">Conn.</span>|Covariates$)F($<span style="color: var(--genome)">Genome</span>|Covariates$)$
+  $H_0: F($<span style="color: var(--connectome)">C</span>, <span style="color: var(--genome)">G</span>|<span style="color: var(--neuroanatomy)">Co</span>$) =
+  F($<span style="color: var(--connectome)">C</span>|<span style="color: var(--neuroanatomy)">Co</span>$) F($<span style="color: var(--genome)">G</span>|<span style="color: var(--neuroanatomy)">Co</span>$)$
+  $H_A: F($<span style="color: var(--connectome)">C</span>, <span style="color: var(--genome)">G</span>|<span style="color: var(--neuroanatomy)">Co</span>$) \neq F($<span style="color: var(--connectome)">C</span>|<span style="color: var(--neuroanatomy)">Co</span>$)F($<span style="color: var(--genome)">G</span>|<span style="color: var(--neuroanatomy)">Co</span>$)$
 - Known as conditional independence test
-- Test statistic: Conditional distance correlation (cdcorr)
+- Test statistic: Conditional distance correlation (CDcorr)
 - Implication if false: there exists causal dependence of connectomes on genomes.
+</div>
+
+<div>
+
+![center](./images/conditional.png)
+
+</div>
+
+</div>
 
 ---
 
-# Conditional distance correlation
+# Methods of comparing connectomes
 
-- Augment distance correlation procedure with third distance matrix.
-
-<br>
-
-![center h:350](./images/conditional_test.png)
-
----
-
-# How do we compare genomes?
-
-- Neuroimaging twin studies do not sequence genomes.
-- Coefficient of kinship ($\phi_{ij}$)
-  - Probabilities of finding a particular gene at a particular location.
-- d(<span style="color: var(--genome)">Genome</span>$_i$, <span style="color: var(--genome)">Genome</span>$_j$) = 1 - 2$\phi_{ij}$.
-
-<br>
-<center>
-
-|   Relationship    |  $\phi_{ij}$  | $1-2\phi_{ij}$ |
-| :---------------: | :-----------: | :------------: |
-|    Monozygotic    | $\frac{1}{2}$ |      $0$       |
-|     Dizygotic     | $\frac{1}{4}$ | $\frac{1}{2}$  |
-| Non-twin siblings | $\frac{1}{4}$ | $\frac{1}{2}$  |
-|     Unrelated     |      $0$      |      $1$       |
-
-</center>
+- Exact : measures all differences in latent positions
+  - Differences in the latent positions implying differences in the connectomes themselves
+- Global : considers the latent positions of one connectome are a scaled version of the other
+  - E.g. males may have globally fewer connections than females
+- Vertex : similar to the global differences, but it allows for each vertex to be scaled differently
+  - E.g regions have preferences in connections
+  - regions tend to connect strongly within hemisphere
 
 ---
 
-# Neuroanatomy (mediator), Age (confounder)
+# We see stochastic ordering along familial relationships
 
-- Literature show:
-  - neuroanatomy (e.g. brain volume) is highly heritable.
-  - age affects genomes and potentially connectomes
-- d(Covariates$_i$, Covariates$_j$) = ||Covariates$_i$ - Covariates$_j$||$_F$
+<div class="columns">
 
----
+<div>
 
-# Human Connectome Project
+Connectome Models
+![center h:450](./images/hist-plot-vert.png)
 
-- Brain scans from identical (monozygotic), fraternal (dizygotic), non-twin siblings.
-- Regions defined using Glasser parcellation (180 regions).
+</div>
 
-<br>
+<div>
 
-![center w:700](./images/hcp_demographics.svg)
+Neuroanatomy
 
-<footer>
-Van Essen, David C., et al., The WU-Minn human connectome project: an overview (2013)
+![center h:150](./images/hist-plot-neuro-vert.png)
 
-Glasser, Matthew F., et al. "A multi-modal parcellation of human cerebral cortex." Nature (2016).
+</div>
 
-</footer>
+</div>
+
+![center h:75](./images/legend.png)
 
 ---
 
-# Associational Test for Connectomic Heritability
+# We detect heritability (associational)
 
-- $H_0: F($<span style="color: var(--connectome)">Connectome</span>, <span style="color: var(--genome)">Genome</span>$) = F($<span style="color: var(--connectome)">Connectome</span>$)F($<span style="color: var(--genome)">Genome</span>$)$
-  $H_A: F($<span style="color: var(--connectome)">Connectome</span>, <span style="color: var(--genome)">Genome</span>$) \neq F($<span style="color: var(--connectome)">Connectome</span>$)F($<span style="color: var(--genome)">Genome</span>$)$
-
-![center h:205](./images/hist-plot-connectomes.png)
-
-<br>
-
-<center>
-
-|   Sex   |      **All**      |    **Females**    |     **Males**     |
-| :-----: | :---------------: | :---------------: | :---------------: |
-| p-value | $<1\times10^{-5}$ | $<1\times10^{-3}$ | $<1\times10^{-2}$ |
-
-</center>
+![center w:700](./images/associationa-tests.png)
 
 ---
 
-# Associational Test for Neuroanatomy
+# Some signals disappear after conditioning
 
-- $H_0: F($<span style="color: var(--neuroanatomy)">Neuroanatomy</span>, <span style="color: var(--genome)">Genome</span>$) = F($<span style="color: var(--neuroanatomy)">Neuroanatomy</span>$)F($<span style="color: var(--genome)">Genome</span>$)$
-  $H_A: F($<span style="color: var(--neuroanatomy)">Neuroanatomy</span>, <span style="color: var(--genome)">Genome</span>$) \neq F($<span style="color: var(--neuroanatomy)">Neuroanatomy</span>$)F($<span style="color: var(--genome)">Genome</span>$)$
-
-![center h:205](./images/hist-plot-neuroanatomy.png)
-
-<br>
-
-<center>
-
-|   Sex   |      **All**      |    **Females**    |     **Males**     |
-| :-----: | :---------------: | :---------------: | :---------------: |
-| p-value | $<1\times10^{-3}$ | $<1\times10^{-2}$ | $<1\times10^{-2}$ |
-
-</center>
-
----
-
-# Causal Test for Connectomic Heritability
-
-- $H_0: F($<span style="color: var(--connectome)">Conn.</span>, <span style="color: var(--genome)">Genome</span>|Covariates$) = F($<span style="color: var(--connectome)">Conn.</span>|Covariates$)F($<span style="color: var(--genome)">Genome</span>|Covariates$)$
-  $H_A: F($<span style="color: var(--connectome)">Conn.</span>, <span style="color: var(--genome)">Genome</span>|Covariates$) \neq F($<span style="color: var(--connectome)">Conn.</span>|Covariates$)F($<span style="color: var(--genome)">Genome</span>|Covariates$)$
-
-<br>
-
-<center>
-
-|   Sex   |      **All**      |    **Females**    |     **Males**     |
-| :-----: | :---------------: | :---------------: | :---------------: |
-| p-value | $<1\times10^{-2}$ | $<1\times10^{-2}$ | $<1\times10^{-2}$ |
-
-</center>
+![center w:700](./images/all-tests.png)
 
 ---
 
@@ -354,11 +330,10 @@ Glasser, Matthew F., et al. "A multi-modal parcellation of human cerebral cortex
 
 ![center h:250](./images/genome_to_connectome.png)
 
-- Present a causal model for heritability of connectomes.
-- Leveraged recent advances:
-  1. Statistical models for networks, allowing meaningful comparison of connectomes.
-  2. Distance and conditional distance correlation as test statistic for causal analysis$^1$.
-- Connectomes are dependent on genome, suggesting heritability.
+<!-- - Causal models = rigorous, interpretab -->
+
+- Statistical models = nuanced investigations
+- Connectomes are dependent on genome, up to some common structures.
 
 ---
 
@@ -412,7 +387,7 @@ Glasser, Matthew F., et al. "A multi-modal parcellation of human cerebral cortex
 [![h:30](https://img.shields.io/github/stars/neurodata/m2g?style=social)](https://github.com/neurodata/m2g)
 [![h:30](https://img.shields.io/github/contributors/neurodata/m2g)](https://github.com/neurodata/m2g/graphs/contributors)
 
-![w:450](../images/logos/brain-logo.jpeg)
+<!-- ![w:450](../images/logos/brain-logo.jpeg) -->
 
 </div>
 
@@ -614,8 +589,6 @@ NeuroData lab, Microsoft Research
 
 ---
 
-![bg center blur:3px opacity:20%](../../images/background.svg)
-
 # Feedback?
 
 <span> </span>
@@ -635,3 +608,145 @@ section {
 ![icon](../images/icons/mail.png) [j1c@jhu.edu](mailto:j1c@jhu.edu)
 ![icon](../images/icons/github.png) [@j1c (Github)](https://github.com/j1c)
 ![icon](../images/icons/web.png) [j1c.org](https://j1c.org/)
+
+---
+
+<!-- paginate: skip -->
+
+# Appendix
+
+---
+
+# How do we compare genomes?
+
+- Neuroimaging twin studies do not sequence genomes.
+- Coefficient of kinship ($\phi_{ij}$)
+  - Probabilities of finding a particular gene at a particular location.
+- d(<span style="color: var(--genome)">Genome</span>$_i$, <span style="color: var(--genome)">Genome</span>$_j$) = 1 - 2$\phi_{ij}$.
+
+<br>
+<center>
+
+|   Relationship    |  $\phi_{ij}$  | $1-2\phi_{ij}$ |
+| :---------------: | :-----------: | :------------: |
+|    Monozygotic    | $\frac{1}{2}$ |      $0$       |
+|     Dizygotic     | $\frac{1}{4}$ | $\frac{1}{2}$  |
+| Non-twin siblings | $\frac{1}{4}$ | $\frac{1}{2}$  |
+|     Unrelated     |      $0$      |      $1$       |
+
+</center>
+
+---
+
+# Neuroanatomy (mediator), Age (confounder)
+
+- Literature show:
+  - neuroanatomy (e.g. brain volume) is highly heritable.
+  - age affects genomes and potentially connectomes
+- d(Covariates$_i$, Covariates$_j$) = ||Covariates$_i$ - Covariates$_j$||$_F$
+
+---
+
+# How do we compare connectomes?
+
+- Random dot product graph (RDPG)
+
+  - Each vertex (region of interest) has a low $d$ dimensional latent vector (position).
+  - Estimate latent position matrix $X$ via adjacency spectral embedding.
+  <!-- - $P[i\rightarrow j]$ = $\langle x_i, x_j\rangle$ -->
+
+- d(<span style="color: var(--connectome)">Connectome</span>$_k$, <span style="color: var(--connectome)">Connectome</span>$_l$) = $||X^{(k)} - X^{(l)}R||_F$
+
+---
+
+# Distance correlation
+
+- Measures dependence between two _multivariate_ quantities.
+  - For example: connectomes, genomes.
+- Can detect nonlinear associations.
+- Measures correlation between pairwise distances.
+
+![center w:800](./images/unconditional_test.png)
+
+---
+
+# Conditional distance correlation
+
+- Augment distance correlation procedure with third distance matrix.
+
+<br>
+
+![center h:350](./images/conditional_test.png)
+
+---
+
+# Human Connectome Project
+
+- Brain scans from identical (monozygotic), fraternal (dizygotic), non-twin siblings.
+- Regions defined using Glasser parcellation (180 regions).
+
+<br>
+
+![center w:700](./images/hcp_demographics.svg)
+
+<footer>
+Van Essen, David C., et al., The WU-Minn human connectome project: an overview (2013)
+
+Glasser, Matthew F., et al. "A multi-modal parcellation of human cerebral cortex." Nature (2016).
+
+</footer>
+
+---
+
+# Associational Test for Connectomic Heritability
+
+- $H_0: F($<span style="color: var(--connectome)">Connectome</span>, <span style="color: var(--genome)">Genome</span>$) = F($<span style="color: var(--connectome)">Connectome</span>$)F($<span style="color: var(--genome)">Genome</span>$)$
+  $H_A: F($<span style="color: var(--connectome)">Connectome</span>, <span style="color: var(--genome)">Genome</span>$) \neq F($<span style="color: var(--connectome)">Connectome</span>$)F($<span style="color: var(--genome)">Genome</span>$)$
+
+![center h:205](./images/hist-plot-connectomes.png)
+
+<br>
+
+<center>
+
+|   Sex   |      **All**      |    **Females**    |     **Males**     |
+| :-----: | :---------------: | :---------------: | :---------------: |
+| p-value | $<1\times10^{-5}$ | $<1\times10^{-3}$ | $<1\times10^{-2}$ |
+
+</center>
+
+---
+
+# Associational Test for Neuroanatomy
+
+- $H_0: F($<span style="color: var(--neuroanatomy)">Neuroanatomy</span>, <span style="color: var(--genome)">Genome</span>$) = F($<span style="color: var(--neuroanatomy)">Neuroanatomy</span>$)F($<span style="color: var(--genome)">Genome</span>$)$
+  $H_A: F($<span style="color: var(--neuroanatomy)">Neuroanatomy</span>, <span style="color: var(--genome)">Genome</span>$) \neq F($<span style="color: var(--neuroanatomy)">Neuroanatomy</span>$)F($<span style="color: var(--genome)">Genome</span>$)$
+
+![center h:205](./images/hist-plot-neuroanatomy.png)
+
+<br>
+
+<center>
+
+|   Sex   |      **All**      |    **Females**    |     **Males**     |
+| :-----: | :---------------: | :---------------: | :---------------: |
+| p-value | $<1\times10^{-3}$ | $<1\times10^{-2}$ | $<1\times10^{-2}$ |
+
+</center>
+
+---
+
+# Causal Test for Connectomic Heritability
+
+- $H_0: F($<span style="color: var(--connectome)">Conn.</span>, <span style="color: var(--genome)">Genome</span>|Covariates$) = F($<span style="color: var(--connectome)">Conn.</span>|Covariates$)F($<span style="color: var(--genome)">Genome</span>|Covariates$)$
+  $H_A: F($<span style="color: var(--connectome)">Conn.</span>, <span style="color: var(--genome)">Genome</span>|Covariates$) \neq F($<span style="color: var(--connectome)">Conn.</span>|Covariates$)F($<span style="color: var(--genome)">Genome</span>|Covariates$)$
+
+<br>
+
+<center>
+
+|   Sex   |      **All**      |    **Females**    |     **Males**     |
+| :-----: | :---------------: | :---------------: | :---------------: |
+| p-value | $<1\times10^{-2}$ | $<1\times10^{-2}$ | $<1\times10^{-2}$ |
+
+</center>
