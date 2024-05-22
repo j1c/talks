@@ -29,19 +29,17 @@ Department of Biomedical Engineering
 
 ![bg right:45% w:450](../images/logos/nd_logo_small.png)
 
-<!-- https://neurodata.io/talks/tathey1/23_06_12_thesis/pres.html#2 -->
-
 ---
 
-<!-- before i get into the bulk of the talk, i want to steal a page from Mike Powell who was a graduate student in our lab, and start my defense with the acknowledgements. That way if you glaze over or fall asleep later in the talk, I hope you'll remember the important part, which is my graditute to the people which I should probably express more often. -->
-
+<!-- before i get into the bulk of the talk, i want to steal a page from previous lab members defenses, and start my defense with the acknowledgements. That way if you glaze over or fall asleep later in the talk, I hope you'll remember the important part, which is my graditute to the people which I should probably express more often. -->
 
 # Acknowledgements
 
 ---
 
+<!-- First, to my advisor, my committee, and close collaborators. I will be forever humbled that you all trusted me to work on data and problems that you all have spent so much time and energy on. I'm grateful for that opportunity and for all I've learned from you over the years, and I'm confident that we'll keep working together for a long while... -->
 
-# Team
+# Committee
 
 <style scoped>
 
@@ -50,79 +48,75 @@ p {
 }
 </style>
 
+
 <div class='columns'>
+<div>
 <div class='minipanels'>
-
-<div>
-
-![person](../images/faces/powell.jpg)
-Mike Powell
-
-</div>
-
-<div>
-
-![person](../images/faces/cep.png)
-Carey Priebe
-
-</div>
-
 <div>
 
 ![person](../images/faces/jovo.png)
 Joshua Vogelstein
 
 </div>
+<div>
 
+![person](../images/faces/cep.png)
+Carey Priebe
+
+</div>
+<div>
+
+![person](../images/faces/powell.jpg)
+Mike Powell
+
+</div>
 </div>
 
 ## Collaborators
 
 <div class='minipanels'>
+<div>
 
+![person](../images/faces/badea.jpeg)
+Alex B.
+
+</div>
 <div>
 
 ![person](../images/faces/ebridge.jpg)
-Eric Bridgeford
+Eric B.
 
 </div>
-
 <div>
 
 ![person](../images/faces/pisner.jpg)
-Derek Pisner
+Derek P.
 
 </div>
-
 <div>
 
 ![person](../images/faces/cencheng.jpg)
-Cencheng Shen
+Cencheng S.
 
 </div>
-
 <div>
 
 ![person](../images/faces/ronak.jpeg)
-Ronak Mehta
+Ronak M.
 
+</div>
 </div>
 
 <div>
 
-![person](../images/faces/vivek.jpg)
-Vivek Gopalakrishnan
+![bg right:45% w:450](../images/logos/nd_logo_small.png)
 
 </div>
-
 </div>
-
-</div>
-
 
 ---
 
-<!-- First, I want to thank many current and former members of the neurodata lab and collaborators and hopkins. It has been a great honor to get to learn from you all on a daily basis, and not just about machine learning or neuroscience or statistics, but also frisbee -->
+<!-- I want to thank many current and past members of the neurodata lab and hopkins. It has been a great honor to get to learn from you all on a daily basis, and not just about machine learning or neuroscience or statistics, but also frisbee -->
 
 <style scoped>
 
@@ -196,20 +190,21 @@ Bear
 <!-- ... -->
 
 </div>
+
 <div>
 
-![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/pedigo.jpg?raw=true)
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/falk_ben.jpg?raw=true)
 Ben 1
 
-<!-- ... -->
+<!-- Falk -->
 
 </div>
 <div>
 
-![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/falk_ben.jpg?raw=true)
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/pedigo.jpg?raw=true)
 Ben 2
 
-<!-- Falk -->
+<!-- ... -->
 
 </div>
 <div>
@@ -230,10 +225,17 @@ Brandon
 </div>
 <div>
 
-![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/shen_cencheng.jpg?raw=true)
-Cencheng
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/devin-crowley.jpg?raw=true)
+Devin
 
-<!-- ... -->
+<!-- Crowley -->
+
+</div>
+
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/drishti.jpg?raw=true)
+Drishti
 
 </div>
 <div>
@@ -244,27 +246,6 @@ Eric
 <!-- Bridgeford -->
 
 </div>
-<div>
-
-![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/devin-crowley.jpg?raw=true)
-Devin
-
-<!-- Crowley -->
-
-</div>
-<div>
-
-![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/derek_pisner.jpg?raw=true)
-Derek
-
-</div>
-<div>
-
-![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/drishti.jpg?raw=true)
-Drishti
-
-</div>
-
 <div>
 
 ![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/hao.jpg?raw=true)
@@ -317,14 +298,6 @@ Jong
 Kareef
 
 <!-- Ullah -->
-
-</div>
-<div>
-
-![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/mike-powell.jpg?raw=true)
-Mike
-
-<!-- Powell -->
 
 </div>
 <div>
@@ -419,8 +392,6 @@ Yuxin
 ![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/ziyan.png?raw=true)
 Ziyan
 
-<!-- Bai -->
-
 </div>
 </div>
 
@@ -428,29 +399,26 @@ Ziyan
 </div>
 <div>
 
-<!-- ![](https://raw.githubusercontent.com/bdpedigo/talks/main/docs/images/neurodata-pizza.jpeg) -->
-<!-- ![](https://raw.githubusercontent.com/bdpedigo/talks/main/docs/images/frisbee-lab.jpeg) -->
-
 ![](../images/nd-photo.jpg)
 ![](../images/nd-photo2.jpg)
 
-
-
 </div>
 </div>
 
 ---
 
-<!-- To my parents - I obviously owe them everything that got me to this point. I just want to highlight that I think my parents instilled in me a sense of wonder and fascination with the natural world, and without that I never would have gotten into science or thought I should pursue a PhD.  -->
+<!-- To my parents and my brother - I obviously owe them everything that got me to this point. Their unwavering support, encouragement, and love have been the foundation of my journey. -->
 
-Parents
+![center w:1400](./images/family.jpeg)
+
 
 ---
 
-<!-- To my partner Lina. For a bit of background in case anyone doesn't know. This figure (panel A) the you see on the top left was taken at our graduation almost exactly 5 years ago, and that's also about the last time we lived in the same city. Despite that, Claire has been incredibly supportful, and heard me blabber more about the ups and downs of my PhD than anyone deserves to. Im so grateful for that support and that we've made it through this chapter stronger and with so many great memories, and i cant wait to see what the future holds for us in seattle. -->
+<!-- To my partner Lina. Im so grateful for that support and that we've made it through this chapter stronger and with so many great memories, and i cant wait to see what the future holds for us in the future. -->
 
 
-Seungyeon
+![center w:1400](./images/lina.jpeg)
+
 
 ---
 
@@ -472,7 +440,7 @@ Seungyeon
 <div>
 
 - Brains contain **neurons**, which carry information via electrical signals
-- Neurons **connect** to each other, allowing neurons to "talk" to each other
+- Neurons connect to each other via **synapses**, allowing neurons to "talk" to each other
 - **Connectome** is a map of the structure of neurons and the synapses between them
     - Shaped by evolution, experience, influences neural activity, behavior
 
@@ -480,16 +448,24 @@ Seungyeon
 
 <div>
 
+![center w:500](../images/neuron-synapse.png)
+
 </div>
 
 </div>
+
+<footer>
+
+Pedigo et al.
+
+</footer>
 
 ---
 
 
-# Diffusion magnetic resonance imaging (dMRI)
+# How do we measure connectomes in humans?
 
-- _in vivo_ imaging technique
+- Diffusion MRI (dMRI): _in vivo_ imaging technique
 - Exploits direction of water diffusion
   - Anisotropic in white matter tracts
   - Isotropic in other tissues
@@ -498,21 +474,26 @@ Seungyeon
 
 ---
 
-# How do we measure connectomes?
 
-Mri -> Preprocessing -> Tractography
+<br>
+<br>
+<br>
 
 <div class='columns'>
 <div>
 
 ### MRI Scans
 
-![center w:800](../images/mri.png) ->
+<br>
+
+![center w:300](../images/mri.png)
 
 </div>
 <div>
 
 ### Preprocessing
+
+![center w:500](../images/mri-processing.png)
 
 </div>
 
@@ -520,7 +501,8 @@ Mri -> Preprocessing -> Tractography
 
 ### Tractography
 
-mri
+![center w:500](../images/tractography-gif.gif)
+
 
 </div>
 </div>
@@ -582,7 +564,6 @@ Networks (or graphs) are mathematical abstractions to represent relational data
 
 ---
 
-
 # Connectomes: maps of neural wiring
 
 ![center h:500](./images/why1.png)
@@ -612,6 +593,8 @@ Images from SciDraw
 </footer>
 
 ---
+
+<!-- Brain diseases disrupt communication between brain regions. This is why studying connectivity can help us develop targeted therapies for diseases like Alzheimer's and Parkinson's. -->
 
 # Linking connectivity to other phenotypes
 
@@ -669,7 +652,7 @@ Images from SciDraw
 
 # Different networks, same statistics
 
-- These four networks have same (graph) statistics!
+- These four networks have same (network) statistics!
 
 <br>
 
@@ -768,49 +751,17 @@ More precisely:
 
 ---
 
-# Heritability of connectomes?
+# Heritability?
 
-- Heritability = proportion of phenotypic variance due to genetic variance
-  - Predict disease rick
+<div class='columns'>
+
+<div>
+
+- Proportion of phenotypic variance due to genetic variance
+  - Predict disease risk
   - Potential for targeted treatments
-  - Genes -> structure -> function -> behavior
 
----
-
-# Animation figures of brain tracks
-
-show pairs from identical twins
-show pairs from fraternal twins
-show pairs from non-twin siblings
-
-
----
-
-# Heritability as causal problem
-
-![center h:460](../images/heritability/dag.png)
-
-<footer>
-
-[Chung et al. "Are human connectomes heritable?" <i>In prep, Imaging Neuroscience</i> (2024)](https://www.biorxiv.org/content/10.1101/2023.04.02.532875v3)
-
-</footer>
-
----
-
-# Do <span style="color: var(--genome)">genomes</span> affect <span style="color: var(--connectome)">connectomes</span>?
-
-<div class="columns">
-
-<div>
-
-- Our hypothesis:
-  $H_0: F($<span style="color: var(--connectome)">C</span>, <span style="color: var(--genome)">G</span>$) = F($<span style="color: var(--connectome)">C</span>$)F($<span style="color: var(--genome)">G</span>$)$
-  $H_A: F($<span style="color: var(--connectome)">C</span>, <span style="color: var(--genome)">G</span>$) \neq F($<span style="color: var(--connectome)">C</span>$)F($<span style="color: var(--genome)">G</span>$)$
-
-- Known as independence testing
-- Test statistic: _distance correlation (Dcorr)_
-- Implication if false: there exists an **associational** heritability.
+- **Do genomes cause connectomes?**
 
 </div>
 
@@ -819,37 +770,15 @@ show pairs from non-twin siblings
 <br>
 <br>
 
-![center](./images/associational.png)
+
+![center h:250](./images/genome_to_connectome.png)
 
 </div>
-
 </div>
+
 
 ---
 
-# Do <span style="color: var(--genome)">genomes</span> affect <span style="color: var(--connectome)">connectomes</span> given <span style="color: var(--neuroanatomy)">covariates</span>?
-
-<div class="columns">
-<div>
-
-- Want to test:
-  $H_0: F($<span style="color: var(--connectome)">C</span>, <span style="color: var(--genome)">G</span>|<span style="color: var(--neuroanatomy)">Co</span>$) =
-  F($<span style="color: var(--connectome)">C</span>|<span style="color: var(--neuroanatomy)">Co</span>$) F($<span style="color: var(--genome)">G</span>|<span style="color: var(--neuroanatomy)">Co</span>$)$
-  $H_A: F($<span style="color: var(--connectome)">C</span>, <span style="color: var(--genome)">G</span>|<span style="color: var(--neuroanatomy)">Co</span>$) \neq F($<span style="color: var(--connectome)">C</span>|<span style="color: var(--neuroanatomy)">Co</span>$)F($<span style="color: var(--genome)">G</span>|<span style="color: var(--neuroanatomy)">Co</span>$)$
-- Known as conditional independence test
-- Test statistic: Conditional distance correlation (CDcorr)
-- Implication if false: there exists causal dependence of connectomes on genomes.
-</div>
-
-<div>
-
-![center](./images/conditional.png)
-
-</div>
-
-</div>
-
----
 
 # Human Connectome Project
 
@@ -869,6 +798,18 @@ Glasser, Matthew F., et al. "A multi-modal parcellation of human cerebral cortex
 
 ---
 
+# Heritability as causal problem
+
+![center h:460](../images/heritability/dag.png)
+
+<footer>
+
+[Chung et al. "Are human connectomes heritable?" <i>In prep, Imaging Neuroscience</i> (2024)](https://www.biorxiv.org/content/10.1101/2023.04.02.532875v3)
+
+</footer>
+
+---
+
 # Methods of comparing connectomes
 
 - Exact : measures all differences in latent positions
@@ -881,55 +822,170 @@ Glasser, Matthew F., et al. "A multi-modal parcellation of human cerebral cortex
 
 ---
 
-# We see stochastic ordering along familial relationships
+
+# Distribution of distances between connectomes
 
 <div class="columns">
 
 <div>
 
-Connectome Models
-![center h:450](./images/hist-plot-vert.png)
+- Stochastic ordering along familial relationships
+- Monozygotic twins have the smallest distances
+- Medians (diamonds) shift towards the right as relatedness decreases
+- Shifts in medians "decrease" in vertex model
 
 </div>
 
 <div>
 
-Neuroanatomy
-
-![center h:150](./images/hist-plot-neuro-vert.png)
+![center h:525](./images/hist-plot-connectomes-vert.png)
 
 </div>
 
 </div>
 
-![center h:75](./images/legend.png)
+<!-- ![center h:75](./images/legend.png) -->
 
 ---
 
-# We detect heritability (associational)
+# Do <span style="color: var(--genome)">genomes</span> affect <span style="color: var(--connectome)">connectomes</span>?
 
-![center w:700](./images/associationa-tests.png)
+<div class="columns">
+
+<div>
+
+- Our hypothesis:
+  $H_0: F($<span style="color: var(--connectome)">C</span>, <span style="color: var(--genome)">G</span>$) = F($<span style="color: var(--connectome)">C</span>$)F($<span style="color: var(--genome)">G</span>$)$
+  $H_A: F($<span style="color: var(--connectome)">C</span>, <span style="color: var(--genome)">G</span>$) \neq F($<span style="color: var(--connectome)">C</span>$)F($<span style="color: var(--genome)">G</span>$)$
+
+- Known as independence testing
+- Test statistic: _distance correlation (Dcorr)_
+- p-value: "If genomes don't affect connectomes, what is the probability there is **associational** correlation?"
+
+</div>
+
+<div>
+
+<br>
+<br>
+
+![center](./images/associational.png)
+
+</div>
+</div>
 
 ---
 
-# Some signals disappear after conditioning
+# <span style="color: var(--genome)">Genomes</span> affect <span style="color: var(--connectome)">connectomes</span>
 
-![center w:700](./images/all-tests.png)
+<div class="columns">
+
+<div>
+
+- Our hypothesis:
+  $H_0: F($<span style="color: var(--connectome)">C</span>, <span style="color: var(--genome)">G</span>$) = F($<span style="color: var(--connectome)">C</span>$)F($<span style="color: var(--genome)">G</span>$)$
+  $H_A: F($<span style="color: var(--connectome)">C</span>, <span style="color: var(--genome)">G</span>$) \neq F($<span style="color: var(--connectome)">C</span>$)F($<span style="color: var(--genome)">G</span>$)$
+
+- p-value: "If genomes don't affect connectomes, what is the probability there is **associational** correlation?"
+- All p-values $<10^{-3}$
+
+</div>
+<div>
+
+<br>
+
+
+![center w:550](./images/associational-pvals.png)
+
+</div>
+</div>
+
+---
+
+# Do <span style="color: var(--genome)">genomes</span> affect <span style="color: var(--connectome)">connectomes</span> given <span style="color: var(--neuroanatomy)">covariates</span>?
+
+<div class="columns">
+<div>
+
+- Want to test:
+  $H_0: F($<span style="color: var(--connectome)">C</span>, <span style="color: var(--genome)">G</span>|<span style="color: var(--neuroanatomy)">Co</span>$) =
+  F($<span style="color: var(--connectome)">C</span>|<span style="color: var(--neuroanatomy)">Co</span>$) F($<span style="color: var(--genome)">G</span>|<span style="color: var(--neuroanatomy)">Co</span>$)$
+  $H_A: F($<span style="color: var(--connectome)">C</span>, <span style="color: var(--genome)">G</span>|<span style="color: var(--neuroanatomy)">Co</span>$) \neq F($<span style="color: var(--connectome)">C</span>|<span style="color: var(--neuroanatomy)">Co</span>$)F($<span style="color: var(--genome)">G</span>|<span style="color: var(--neuroanatomy)">Co</span>$)$
+- Known as conditional independence test
+- Test statistic: Conditional distance correlation (CDcorr)
+- p-value: "If genomes don't affect connectomes, what is the probability there is **causal** correlation?"
+</div>
+<div>
+
+![center](./images/conditional.png)
+
+</div>
+</div>
+
+---
+
+# <span style="color: var(--genome)">Genomes</span> affect <span style="color: var(--connectome)">connectomes</span> given <span style="color: var(--neuroanatomy)">covariates</span>
+
+<div class="columns">
+<div>
+
+- Want to test:
+  $H_0: F($<span style="color: var(--connectome)">C</span>, <span style="color: var(--genome)">G</span>|<span style="color: var(--neuroanatomy)">Co</span>$) =
+  F($<span style="color: var(--connectome)">C</span>|<span style="color: var(--neuroanatomy)">Co</span>$) F($<span style="color: var(--genome)">G</span>|<span style="color: var(--neuroanatomy)">Co</span>$)$
+  $H_A: F($<span style="color: var(--connectome)">C</span>, <span style="color: var(--genome)">G</span>|<span style="color: var(--neuroanatomy)">Co</span>$) \neq F($<span style="color: var(--connectome)">C</span>|<span style="color: var(--neuroanatomy)">Co</span>$)F($<span style="color: var(--genome)">G</span>|<span style="color: var(--neuroanatomy)">Co</span>$)$
+- p-value: "If genomes don't affect connectomes, what is the probability there is **causal** correlation?"
+- p-values $<10^{-2}$ for only exact and global models
+
+</div>
+<div>
+
+<br>
+<br>
+
+![center w:550](./images/conditional-pvals.png)
+
+</div>
+</div>
+
+---
+
+# What if we remove "heritable" vertices?
+
+<div class="columns-bl2">
+<div>
+
+- Test per vertex $i$:
+$H_0: F($<span style="color: var(--connectome)">$C_i$</span>, <span style="color: var(--genome)">G</span>|<span style="color: var(--neuroanatomy)">Co</span>$) =
+  F($<span style="color: var(--connectome)">$C_i$</span>|<span style="color: var(--neuroanatomy)">Co</span>$) F($<span style="color: var(--genome)">G</span>|<span style="color: var(--neuroanatomy)">Co</span>$)$
+$H_A: F($<span style="color: var(--connectome)">$C_i$</span>, <span style="color: var(--genome)">G</span>|<span style="color: var(--neuroanatomy)">Co</span>$) \neq F($<span style="color: var(--connectome)">$C_i$</span>|<span style="color: var(--neuroanatomy)">Co</span>$)F($<span style="color: var(--genome)">G</span>|<span style="color: var(--neuroanatomy)">Co</span>$)$
+
+- Then test "non-heritable" subgraphs ($C_s$):
+$H_0: F($<span style="color: var(--connectome)">$C_s$</span>, <span style="color: var(--genome)">G</span>|<span style="color: var(--neuroanatomy)">Co</span>$) =
+  F($<span style="color: var(--connectome)">$C_s$</span>|<span style="color: var(--neuroanatomy)">Co</span>$) F($<span style="color: var(--genome)">G</span>|<span style="color: var(--neuroanatomy)">Co</span>$)$
+$H_A: F($<span style="color: var(--connectome)">$C_s$</span>, <span style="color: var(--genome)">G</span>|<span style="color: var(--neuroanatomy)">Co</span>$) \neq F($<span style="color: var(--connectome)">$C_s$</span>|<span style="color: var(--neuroanatomy)">Co</span>$)F($<span style="color: var(--genome)">G</span>|<span style="color: var(--neuroanatomy)">Co</span>$)$
+
+- p-value: "If genomes don't affect connectome subgraphs, what is the probability there is **causal** correlation?"
+- p-values $<10^{-2}$ for 3 hypotheses
+
+</div>
+<div>
+
+<br>
+<br>
+
+![center w:550](./images/conditional-subgraph-pvals.png)
+
+</div>
+</div>
 
 ---
 
 # To sum up...
-
-<!-- ![center h:250](./images/genome_to_connectome.png) -->
-
-<!-- - Causal models = rigorous, interpretab -->
-
 > Are human connectomes heritable?
 
 > Depends on the context.
 
-- Statistical models = nuanced investigations
-- Connectomes are dependent on genome, up to some common structures.
+- Connectomes are heritable, up to some common structures.
 
 ---
 
