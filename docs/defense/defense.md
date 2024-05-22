@@ -13,9 +13,7 @@ p {
 }
 </style>
 
-# Statistical Connectomics
-
-## Thesis Committee Meeting
+# Statistical Connectomics: Developing Methods Towards Understanding Populations of Networks
 
 <br>
 
@@ -35,18 +33,500 @@ Department of Biomedical Engineering
 
 ---
 
-# Outline
+<!-- before i get into the bulk of the talk, i want to steal a page from Mike Powell who was a graduate student in our lab, and start my defense with the acknowledgements. That way if you glaze over or fall asleep later in the talk, I hope you'll remember the important part, which is my graditute to the people which I should probably express more often. -->
 
-- What we've done
 
-  - **Deriving Connectomes of Human Brains**
-  - Statistical Modeling for Connectomes
-  - Heritability of Human Connectomes
-  - `graspologic` + `hyppo` + `m2g`
-
-- Graduation plan
+# Acknowledgements
 
 ---
+
+
+# Team
+
+<style scoped>
+
+p {
+    font-size: 24px;
+}
+</style>
+
+<div class='columns'>
+<div class='minipanels'>
+
+<div>
+
+![person](../images/faces/powell.jpg)
+Mike Powell
+
+</div>
+
+<div>
+
+![person](../images/faces/cep.png)
+Carey Priebe
+
+</div>
+
+<div>
+
+![person](../images/faces/jovo.png)
+Joshua Vogelstein
+
+</div>
+
+</div>
+
+## Collaborators
+
+<div class='minipanels'>
+
+<div>
+
+![person](../images/faces/ebridge.jpg)
+Eric Bridgeford
+
+</div>
+
+<div>
+
+![person](../images/faces/pisner.jpg)
+Derek Pisner
+
+</div>
+
+<div>
+
+![person](../images/faces/cencheng.jpg)
+Cencheng Shen
+
+</div>
+
+<div>
+
+![person](../images/faces/ronak.jpeg)
+Ronak Mehta
+
+</div>
+
+<div>
+
+![person](../images/faces/vivek.jpg)
+Vivek Gopalakrishnan
+
+</div>
+
+</div>
+
+</div>
+
+
+---
+
+<!-- First, I want to thank many current and former members of the neurodata lab and collaborators and hopkins. It has been a great honor to get to learn from you all on a daily basis, and not just about machine learning or neuroscience or statistics, but also frisbee -->
+
+<style scoped>
+
+p {
+    font-size: 15px;
+}
+
+.minipanels {
+  display: grid;
+  text-align: center;
+  grid-template-columns: repeat(9, 80px);
+  gap: 0.0rem;
+  margin: 0px;
+  border: 0px;
+  pad: 0px;
+  align: left;
+}
+
+</style>
+
+<div class="columns-bl">
+<div>
+
+
+<div class='minipanels'>
+<div>
+
+![person](https://raw.githubusercontent.com/neurodata/neurodata.io/deploy/source/images/people/alex_loftus.jpg)
+Alex
+
+<!-- Loftus -->
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/ali_saad.jpg?raw=true)
+Ali
+
+<!-- Saad-Eldin -->
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/alice_wang.jpg?raw=true)
+Alice
+
+<!-- Wang -->
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/anton_alyakin.jpg?raw=true)
+Anton
+
+<!-- ... -->
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/ashwin_headshot.jpg?raw=true)
+Ashwin
+
+<!-- ... -->
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/bear.jpg?raw=true)
+Bear
+
+<!-- ... -->
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/pedigo.jpg?raw=true)
+Ben 1
+
+<!-- ... -->
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/falk_ben.jpg?raw=true)
+Ben 2
+
+<!-- Falk -->
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/bijan.jpg?raw=true)
+Bijan
+
+<!-- ... -->
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/brandon_duderstadt.jpg?raw=true)
+Brandon
+
+<!-- ... -->
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/shen_cencheng.jpg?raw=true)
+Cencheng
+
+<!-- ... -->
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/bridgeford.jpg?raw=true)
+Eric
+
+<!-- Bridgeford -->
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/devin-crowley.jpg?raw=true)
+Devin
+
+<!-- Crowley -->
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/derek_pisner.jpg?raw=true)
+Derek
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/drishti.jpg?raw=true)
+Drishti
+
+</div>
+
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/hao.jpg?raw=true)
+Hao
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/hayden-helm.jpg?raw=true)
+Hayden
+
+<!-- Helm -->
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/javier_how.jpg?raw=true)
+Javier
+
+<!-- How -->
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/jayanta.jpg?raw=true)
+Jayanta
+
+<!-- Dey -->
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/jesus.jpg?raw=true)
+Jesus
+
+<!-- Arroyo -->
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/jong_shin.png?raw=true)
+Jong
+
+<!-- Shin -->
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/kareef_ullah.jpg?raw=true)
+Kareef
+
+<!-- Ullah -->
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/mike-powell.jpg?raw=true)
+Mike
+
+<!-- Powell -->
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/patsolic_jesse.jpg?raw=true)
+Jesse
+
+<!-- Patsolic -->
+
+</div>
+
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/ronak_mehta.jpg?raw=true)
+Ronak
+
+<!-- Mehta -->
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/ronan.jpg?raw=true)
+Ronan
+
+<!-- Perry -->
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/ross-lawrence.jpg?raw=true)
+Ross
+
+<!-- Lawrence -->
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/sambit-panda.jpg?raw=true)
+Sambit
+
+<!-- Panda -->
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/ogihara_suki.jpg?raw=true)
+Suki
+
+<!-- Panda -->
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/tingshan.png?raw=true)
+Tingshan
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/tomita_tyler.jpg?raw=true)
+Tyler
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/tommy_athey.jpg?raw=true)
+Tommy
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/vikram.jpg?raw=true)
+Vikram
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/vivek.jpg?raw=true)
+Vivek
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/yuxin.jpg?raw=true)
+Yuxin
+
+<!-- Bai -->
+
+</div>
+<div>
+
+![person](https://github.com/neurodata/neurodata.io/blob/deploy/source/images/people/ziyan.png?raw=true)
+Ziyan
+
+<!-- Bai -->
+
+</div>
+</div>
+
+
+</div>
+<div>
+
+<!-- ![](https://raw.githubusercontent.com/bdpedigo/talks/main/docs/images/neurodata-pizza.jpeg) -->
+<!-- ![](https://raw.githubusercontent.com/bdpedigo/talks/main/docs/images/frisbee-lab.jpeg) -->
+
+![](../images/nd-photo.jpg)
+![](../images/nd-photo2.jpg)
+
+
+
+</div>
+</div>
+
+---
+
+<!-- To my parents - I obviously owe them everything that got me to this point. I just want to highlight that I think my parents instilled in me a sense of wonder and fascination with the natural world, and without that I never would have gotten into science or thought I should pursue a PhD.  -->
+
+Parents
+
+---
+
+<!-- To my partner Lina. For a bit of background in case anyone doesn't know. This figure (panel A) the you see on the top left was taken at our graduation almost exactly 5 years ago, and that's also about the last time we lived in the same city. Despite that, Claire has been incredibly supportful, and heard me blabber more about the ups and downs of my PhD than anyone deserves to. Im so grateful for that support and that we've made it through this chapter stronger and with so many great memories, and i cant wait to see what the future holds for us in seattle. -->
+
+
+Seungyeon
+
+---
+
+# Outline
+
+- **Connectomes of Human Brains**
+- Statistical Modeling for Connectomes
+- Heritability of Human Connectomes
+- Open-source Software
+
+
+
+---
+
+# Connectomes: maps of neural wiring
+
+<div class='columns'>
+
+<div>
+
+- Brains contain **neurons**, which carry information via electrical signals
+- Neurons **connect** to each other, allowing neurons to "talk" to each other
+- **Connectome** is a map of the structure of neurons and the synapses between them
+    - Shaped by evolution, experience, influences neural activity, behavior
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+---
+
+
+# Diffusion magnetic resonance imaging (dMRI)
+
+- _in vivo_ imaging technique
+- Exploits direction of water diffusion
+  - Anisotropic in white matter tracts
+  - Isotropic in other tissues
+
+![center w:800](../images/nerve-bundle-diagram-horizontal.png)
+
+---
+
+# How do we measure connectomes?
+
+Mri -> Preprocessing -> Tractography
+
+<div class='columns'>
+<div>
+
+### MRI Scans
+
+![center w:800](../images/mri.png) ->
+
+</div>
+<div>
+
+### Preprocessing
+
+</div>
+
+<div>
+
+### Tractography
+
+mri
+
+</div>
+</div>
+
+---
+
 
 # Representing brains as networks
 
@@ -66,18 +546,6 @@ Networks (or graphs) are mathematical abstractions to represent relational data
 
 </div>
 </div>
-
----
-
-# Connectomes from diffusion MRI (dMRI)
-
-- _in vivo_ imaging technique
-- Exploits direction of water diffusion
-  - Anisotropic in white matter tracts
-  - Isotropic in other tissues
-- Estimates of number of white matter tracts via tractography
-
-![center h:275](./images/white-matter-tract-hori.jpeg)
 
 ---
 
@@ -111,26 +579,91 @@ Networks (or graphs) are mathematical abstractions to represent relational data
 
 </footer>
 
+
+---
+
+
+# Connectomes: maps of neural wiring
+
+![center h:500](./images/why1.png)
+
+<footer>
+Images from SciDraw
+</footer>
+
+---
+
+# Linking connectivity to other phenotypes
+
+![center h:500](./images/why2.png)
+
+<footer>
+Images from SciDraw
+</footer>
+
+---
+
+# Linking connectivity to other phenotypes
+
+![center h:500](./images/why3.png)
+
+<footer>
+Images from SciDraw
+</footer>
+
+---
+
+# Linking connectivity to other phenotypes
+
+![center h:500](./images/why4.png)
+
+<footer>
+Images from SciDraw
+</footer>
+
 ---
 
 # Outline
 
-- What we've done
+- Connectomes of Human Brains
+- **Statistical Modeling for Connectomes**
+- Heritability of Human Connectomes
+- Open-source Software
 
-  - Connectomes of Human Brains
-  - **Statistical Modeling for Connectomes**
-  - Heritability of Human Connectomes
-  - `graspologic` + `hyppo` + `m2g`
-
-- Graduation plan
 
 ---
 
 # Different data, same statistics (Ascombe's Quartet)
 
+<div class="columns">
+<div>
+
 - These four datasets have same statistics!
+    - Mean ($\bar x$): 9
+    - Variance ($s^2_x$): 11
+    - Mean ($\bar y$): 7.5
+    - Variance ($s^2_y$): 4.12
+    - Correlation ($\rho_{xy}$):0.816
+
+
+</div>
+
+<div>
+
+<br>
 
 ![center w:650](../images/ascombes.png)
+
+<footer>
+
+[Wikipedia - Ascombe's Quartet](https://en.wikipedia.org/wiki/Anscombe's_quartet)
+
+</footer>
+
+</div>
+
+</div>
+
 
 ---
 
@@ -139,15 +672,33 @@ Networks (or graphs) are mathematical abstractions to represent relational data
 - These four networks have same (graph) statistics!
 
 <br>
-<br>
 
-![center w:750](../images/ten-node-graphs.gif)
+
+![center w:800](../images/ten-node-graphs.gif)
 
 <footer>
 
 [Chung et al. "Statistical connectomics." <i>Annual Review of Statistics and Its Application</i> (2021)](https://www.annualreviews.org/content/journals/10.1146/annurev-statistics-042720-023234)
 
 </footer>
+
+
+---
+
+# Show the other figure of the same statistics
+
+- Consider all non-isomorphic graphs with 10 vertices
+
+
+![center w:800](../images/network-stat-dists.gif)
+
+
+<footer>
+
+[Chung et al. "Statistical connectomics." <i>Annual Review of Statistics and Its Application</i> (2021)](https://www.annualreviews.org/content/journals/10.1146/annurev-statistics-042720-023234)
+
+</footer>
+
 
 ---
 
@@ -209,14 +760,11 @@ More precisely:
 
 # Outline
 
-- What we've done
+- Connectomes of Human Brains
+- Statistical Modeling for Connectomes
+- **Heritability of Human Connectomes**
+- Open-source Software
 
-  - Connectomes of Human Brains
-  - Statistical Modeling for Connectomes
-  - **Heritability of Human Connectomes**
-  - `graspologic` + `hyppo` + `m2g`
-
-- Graduation plan
 
 ---
 
@@ -226,6 +774,15 @@ More precisely:
   - Predict disease rick
   - Potential for targeted treatments
   - Genes -> structure -> function -> behavior
+
+---
+
+# Animation figures of brain tracks
+
+show pairs from identical twins
+show pairs from fraternal twins
+show pairs from non-twin siblings
+
 
 ---
 
@@ -363,9 +920,13 @@ Neuroanatomy
 
 # To sum up...
 
-![center h:250](./images/genome_to_connectome.png)
+<!-- ![center h:250](./images/genome_to_connectome.png) -->
 
 <!-- - Causal models = rigorous, interpretab -->
+
+> Are human connectomes heritable?
+
+> Depends on the context.
 
 - Statistical models = nuanced investigations
 - Connectomes are dependent on genome, up to some common structures.
@@ -374,14 +935,10 @@ Neuroanatomy
 
 # Outline
 
-- What we've done
-
-  - Connectomes of Human Brains
-  - Statistical Modeling for Connectomes
-  - Heritability of Human Connectomes
-  - **`graspologic` + `hyppo` + `m2g`**
-
-- Graduation plan
+- Connectomes of Human Brains
+- Statistical Modeling for Connectomes
+- Heritability of Human Connectomes
+- **Open-source Software**
 
 ---
 
@@ -423,208 +980,16 @@ Neuroanatomy
 [![h:30](https://img.shields.io/github/contributors/neurodata/m2g)](https://github.com/neurodata/m2g/graphs/contributors)
 
 <!-- ![w:450](../images/logos/brain-logo.jpeg) -->
+![w:450](../images/logos/nd_logo_small.png)
 
 </div>
 
 </div>
+
 
 ---
 
-# Outline
-
-- What we've done
-
-  - Connectomes of Human Brains
-  - Statistical Modeling for Connectomes
-  - Heritability of Human Connectomes
-  - `graspologic` + `hyppo`
-
-- **Graduation plan**
-
----
-
-# Summary of work so far
-
-<style scoped>
-
-ul,p {
-    font-size: 23px;
-}
-</style>
-
-<div class="columns">
-<div>
-
-#### Manuscripts
-
-- (Co)-First author
-  - Heritability, in review at _Imaging Neuro_ (2024)
-  - m2g, in review at _Nature Methods_ (2024)
-  - Two-sample graph testing, _Stat_ (2022)
-  - Statistical Connectomics, _ARISA_ (2021)
-  - `graspologic`, _JMLR_ (2019)
-- Second author
-  - Indep. Testing in Time Series, _TMLR_ (2024)
-  - Causal Conditional DCorr, _in review_ (2023)
-  - Multiscale Connectomics, _in review_ (2023)
-- Others
-  - 5 others published
-
-</div>
-<div>
-
-#### Conference Presentations
-
-- OHBM (x3)
-- SfN (x3)
-- Neuromatch (x2)
-<!-- - NeurIPS Workshop (x1) -->
-
-#### Invited Lectures & Talks
-
-- JSM, 2023
-- Advanced Graph Analytics Workshop (JHU), 2023
-- OHBM, 2019
-
-#### Awards
-
-- BRAIN Initiative Trainee Highlight Award
-- AWS Research Credit Grants (x2)
-
-</div>
-</div>
-
----
-
-# Summary of work to be done
-
-<style scoped>
-
-ul,p {
-    font-size: 26px;
-}
-</style>
-
-<div class="columns">
-<div>
-
-#### Manuscripts
-
-- Respond to reviews
-- Collaboration with Child Mind Institute
-<!-- - Collaboration with Alex Badea -->
-
-#### Conferences/Talks
-
-- Collaborative Research in Computational Neuroscience (CRCNS)
-- Advanced Graph Analytics Workshop (JHU), 2024
-
-</div>
-<div>
-
-#### Code
-
-- Continue to develop `graspologic` and `hyppo`
-
-</div>
-</div>
-
-<style scoped>
-h2 {
-    justify-content: center;
-    text-align: center;
-}
-</style>
-
-<br>
-
-## Graduation $\approx$ May 2024
-
----
-
-# Acknowledgements
-
-#### Team
-
-<style scoped>
-
-p {
-    font-size: 24px;
-}
-</style>
-
-<div class='minipanels'>
-
-<div>
-
-![person](../images/faces/ebridge.jpg)
-Eric Bridgeford
-
-</div>
-
-<div>
-
-![person](../images/faces/pedigo.jpg)
-Ben Pedigo
-
-</div>
-
-<div>
-
-![person](../images/faces/pisner.jpg)
-Derek Pisner
-
-</div>
-
-<div>
-
-![person](../images/faces/cencheng.jpg)
-Cencheng Shen
-
-</div>
-
-<div>
-
-![person](../images/faces/ronak.jpeg)
-Ronak Mehta
-
-</div>
-
-<div>
-
-![person](../images/faces/vivek.jpg)
-Vivek Gopalakrishnan
-
-</div>
-
-<div>
-
-![person](../images/faces/powell.jpg)
-Mike Powell
-
-</div>
-
-<div>
-
-![person](../images/faces/cep.png)
-Carey Priebe
-
-</div>
-
-<div>
-
-![person](../images/faces/jovo.png)
-Joshua Vogelstein
-
-</div>
-
-</div>
-
-NeuroData lab, Microsoft Research
-
----
-
-# Feedback?
+# Questions?
 
 <span> </span>
 <span> </span>
