@@ -69,6 +69,12 @@ img[alt~="person"] {
     gap: 1rem;
 }
 
+.columns-bl2 {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 1rem;
+}
+
 .columns-nospace {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
