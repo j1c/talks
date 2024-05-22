@@ -31,7 +31,7 @@ Department of Biomedical Engineering
 
 ---
 
-<!-- before i get into the bulk of the talk, i want to steal a page from previous lab members defenses, and start my defense with the acknowledgements. That way if you glaze over or fall asleep later in the talk, I hope you'll remember the important part, which is my graditute to the people which I should probably express more often. -->
+<!-- before i get into the bulk of the talk, i want to steal a page from previous lab members, and start my defense with the acknowledgements. That way if you glaze over or fall asleep later in the talk, I hope you'll remember the important part, which is my graditute to the people which I should probably express more often. -->
 
 # Acknowledgements
 
@@ -414,7 +414,7 @@ Ziyan
 
 ---
 
-<!-- To my partner Lina. Im so grateful for that support and that we've made it through this chapter stronger and with so many great memories, and i cant wait to see what the future holds for us in the future. -->
+<!-- To my partner Lina. Im so grateful for the support and that we've made it through this chapter and with so many great memories from traveling many parts of the world. i cant wait to see what the future holds for us in the future. -->
 
 
 ![center w:1400](./images/lina.jpeg)
@@ -440,8 +440,8 @@ Ziyan
 <div>
 
 - Brains contain **neurons**, which carry information via electrical signals
-- Neurons connect to each other via **synapses**, allowing neurons to "talk" to each other
-- **Connectome** is a map of the structure of neurons and the synapses between them
+- Neurons **connect** to each other via synapses, allowing neurons to "talk" to each other
+- **Connectome** is a map of the structure of neurons and the connections between them
     - Shaped by evolution, experience, influences neural activity, behavior
 
 </div>
