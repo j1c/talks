@@ -37,8 +37,8 @@ Department of Biomedical Engineering
 - Focus:
     1. developing statistical methods
         - for network data, specifically brain networks
-        - for time-series data
         - for causal inference in observational studies
+        - for time-series data
     2. developing open-source software
 
 ---
