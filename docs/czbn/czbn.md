@@ -13,7 +13,7 @@ p {
 }
 </style>
 
-# Developing Methods Towards Understanding Populations of Networks
+# CZ Biohub Network
 
 <br>
 
